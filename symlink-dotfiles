@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# mkdir ~/.dotfiles
+# cd ~/.dotfiles
+# git remote add origin git@github.com:natekratchman/dotfiles.git
+# git fetch origin
+# git merge origin
+
+rm ~/.bash_profile
+rm ~/.vimrc
+rm ~/.tmux.config
+
+ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.tmux.config ~/.tmux.config
+
