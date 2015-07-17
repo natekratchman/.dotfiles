@@ -37,6 +37,8 @@ alias ctct='clear; cd ~/Dropbox/Code/CTCT; ls'
 alias nom='cd ~/Dropbox/Code/nomster; set_shell_to_local'
 #helpers
 alias set_shell_to_local='rbenv shell `rbenv local`'
+alias dotfiles='cd ~/.dotfiles'
+alias blog='cd ~/Dropbox/Code/blog'
 
 # Other
 alias sel='DRIVER=selenium'
@@ -45,9 +47,11 @@ alias l="ls -la"
 alias lsa="ls -a"
 alias be="bundle exec"
 alias cl="clear"
-alias editbash="subl ~/.bash_profile"
+alias editbash="vim ~/.bash_profile"
+alias editvim="vim ~/.vimrc"
 alias reload="source ~/.bash_profile"
 alias up="cd .."
+alias ..="cd .."
 alias her="heroku"
 # function set_default_shell_fish {
 #   chsh -s /usr/local/bin/fish
@@ -148,11 +152,10 @@ prompt
     # Editors
     # Tells your shell that when a program requires various editors, use sublime.
     # The -w flag tells your shell to wait until sublime exits
-    export VISUAL="subl -w"
-    export SVN_EDITOR="subl -w"
-    # export GIT_EDITOR="subl -w"
+    export VISUAL=vim
+    export SVN_EDITOR=vim
     export GIT_EDITOR=vim
-    export EDITOR="subl -w"
+    export EDITOR=vim
  
   # Paths
     # export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
