@@ -71,8 +71,8 @@ inoremap <C-h> <LEFT>
 inoremap <C-l> <RIGHT>
 noremap <C-u> d0
 noremap <C-k> d$
-nnoremap J 20j
-nnoremap K 20k
+nnoremap J 20jzz
+nnoremap K 20kzz
 
 " navigate panes
 nnoremap <leader>h <C-w>h
