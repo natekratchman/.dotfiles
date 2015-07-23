@@ -1,3 +1,5 @@
+set shell=/bin/bash\ -i
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -51,8 +53,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
 
-" Load bash aliases
-let $BASH_ENV = "~/.bash_aliases"
+" configure nerdtree
+let NERDTreeShowHidden=1
 
 " REMAPPINGS
 nnoremap <SPACE> <Nop>

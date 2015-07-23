@@ -1,5 +1,3 @@
-shopt -s expand_aliases
-
 # Git
 alias ga.="git add ."
 alias ga="git add"
@@ -22,6 +20,10 @@ alias gpom="git push origin master"
 alias gst="git status"
 
 # Quick Navigation
+alias up="cd .."
+alias ..="cd .."
+alias dotfiles='cd ~/.dotfiles'
+alias blog='cd ~/Dropbox/Code/blog'
 #ctct
 alias boost='cd ~/Code/boost; set_shell_to_local'
 alias fbaa='cd ~/Code/facebook-ads-adapter; set_shell_to_local'
@@ -33,8 +35,6 @@ alias ctct='clear; cd ~/Dropbox/Code/CTCT; ls'
 alias nom='cd ~/Dropbox/Code/nomster; set_shell_to_local'
 #helpers
 alias set_shell_to_local='rbenv shell `rbenv local`'
-alias dotfiles='cd ~/.dotfiles'
-alias blog='cd ~/Dropbox/Code/blog'
 
 # Other
 alias sel='DRIVER=selenium'
@@ -46,8 +46,6 @@ alias cl="clear"
 alias editbash="vim ~/.bash_profile"
 alias editvim="vim ~/.vimrc"
 alias reload="source ~/.bash_profile"
-alias up="cd .."
-alias ..="cd .."
 alias her="heroku"
 
 # postgres

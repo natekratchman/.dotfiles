@@ -1,5 +1,4 @@
-# Load bash aliases
-let $BASH_ENV = "~/.bash_aliases"
+source ~/.bash_aliases
 
 ## PROMPT FORMATTING
 # ===================

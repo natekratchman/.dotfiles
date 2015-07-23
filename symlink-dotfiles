@@ -6,11 +6,18 @@
 # git fetch origin
 # git merge origin
 
-rm ~/.bash_profile
-rm ~/.vimrc
-rm ~/.tmux.config
+mv ~/.bash_profile ~/.bash_profile-BACKUP
+mv ~/.bashrc ~/.bashrc-BACKUP
+mv ~/.vimrc ~/.vimrc-BACKUP
+mv ~/.tmux.config ~/.tmux.config-BACKUP
+
+touch ~/.bash_profile
+touch ~/.bashrc
+touch ~/.vimrc
+touch ~/.tmux.config
 
 ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.tmux.config ~/.tmux.config
 
