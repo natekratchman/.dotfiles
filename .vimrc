@@ -1,3 +1,5 @@
+set shell=/bin/bash\ -i
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -41,7 +43,20 @@ set listchars=tab:▸\ ,trail:·
 set number
 set shiftwidth=2             " normal mode indentation commands use 2 spaces
 set smartcase                " case-sensitive search if any caps
+set history=200
+set wildmode=longest,list
 
+" configure status and tab lines (airline plugin)
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme = 'tomorrow'
+" let g:airline_theme = 'base16'
+
+" configure nerdtree
+let NERDTreeShowHidden=1
+
+" REMAPPINGS
 nnoremap <SPACE> <Nop>
 nnoremap <BS> daw
 let mapleader = " "
@@ -57,6 +72,38 @@ nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 inoremap <C-h> <LEFT>
 inoremap <C-l> <RIGHT>
+
+" no arrow keys! Muahahahaha!
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+nnoremap <C-j> J
+
+noremap H ^
+noremap L $
+inoremap <C-h> <LEFT>
+inoremap <C-l> <RIGHT>
+noremap <C-u> d0
+noremap <C-k> d$
+nnoremap J 20jzz
+nnoremap K 20kzz
+
+" navigate panes
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+" navigate buffers
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-w> :bd<CR>
+
+" navigate through command history
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " no arrow keys! Muahahahaha!
 nnoremap <up> <nop>
