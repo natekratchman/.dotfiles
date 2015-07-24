@@ -1,16 +1,16 @@
-set shell=/bin/bash\ -i
+set shell=/bin/bash\ -i " enable interactive shell with :shell ex command
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" required
+set nocompatible
+filetype off
+filetype plugin indent on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
 Plugin 'tomtom/tcomment_vim' " comment toggling (N:gcc or V:gc)
 Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher (see below)
 Plugin 'kien/ctrlp.vim' " directory search (sublime's cmd-T)
@@ -18,15 +18,24 @@ Plugin 'Valloric/YouCompleteMe' " auto-completion
 Plugin 'scrooloose/nerdtree' " tree view for directory (<leader>d)
 Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
-" Learn more:
 Plugin 'tpope/vim-fugitive' " git integration (:Gblame, :Gdiff, etc.)
 Plugin 'bling/vim-airline' " status/tabline
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'tpope/vim-rails'
 
-" All of your Plugins must be added before the following line
+" === All Plugins must be added above this line ===
 call vundle#end()            " required
-filetype plugin indent on    " required
+
+" Configure plugins
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme = 'tomorrow'
+let NERDTreeShowHidden=1
+let g:ctrlp_show_hidden = 1
+
+" source mappings
+:so ~/.mappings.vim
 
 " Color scheme
 syntax enable
@@ -45,71 +54,6 @@ set shiftwidth=2             " normal mode indentation commands use 2 spaces
 set smartcase                " case-sensitive search if any caps
 set history=200
 set wildmode=longest,list
-
-" configure status and tab lines (airline plugin)
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'tomorrow'
-" let g:airline_theme = 'base16'
-
-" configure nerdtree
-let NERDTreeShowHidden=1
-
-" REMAPPINGS
-nnoremap <SPACE> <Nop>
-nnoremap <BS> daw
-let mapleader = " "
-
-nnoremap <leader>a :Ag<space>
-nnoremap <leader>t :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-noremap H ^
-noremap L $
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
-inoremap <C-h> <LEFT>
-inoremap <C-l> <RIGHT>
-
-" no arrow keys! Muahahahaha!
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
-nnoremap <C-j> J
-
-noremap H ^
-noremap L $
-inoremap <C-h> <LEFT>
-inoremap <C-l> <RIGHT>
-noremap <C-u> d0
-noremap <C-k> d$
-nnoremap J 20jzz
-nnoremap K 20kzz
-
-" navigate panes
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
-
-" navigate buffers
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
-nnoremap <C-w> :bd<CR>
-
-" navigate through command history
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-
-" no arrow keys! Muahahahaha!
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
