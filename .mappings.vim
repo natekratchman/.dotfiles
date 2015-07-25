@@ -4,8 +4,9 @@ let mapleader = " "
 
 nnoremap <leader>a :Ag<space>
 
-" more fun than :w
-nnoremap WW :w<CR>
+" save/exit
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wq ZZ
 
 " move/copy
 nnoremap <leader>m V:m
@@ -27,7 +28,7 @@ nnoremap <leader>c :close<CR>
 " buffer navigation
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
-nnoremap <leader>w :bd<CR>
+nnoremap <leader>x :bd<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 
 " shift jumping
