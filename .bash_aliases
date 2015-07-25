@@ -22,19 +22,17 @@ alias gst="git status"
 # Quick Navigation
 alias up="cd .."
 alias ..="cd .."
+alias last="cd -"
 alias dotfiles='cd ~/.dotfiles'
 alias blog='cd ~/Dropbox/Code/blog'
 #ctct
-alias boost='cd ~/Code/boost; set_shell_to_local'
-alias fbaa='cd ~/Code/facebook-ads-adapter; set_shell_to_local'
-alias al='cd ~/Code/ad-launcher; set_shell_to_local'
-alias oiaa='cd ~/Code/opt-intelligence-ads-adapter; set_shell_to_local'
+alias boost='cd ~/Code/boost'
+alias fbaa='cd ~/Code/facebook-ads-adapter'
+alias al='cd ~/Code/ad-launcher'
+alias oiaa='cd ~/Code/opt-intelligence-ads-adapter'
 #home
 alias code='clear; cd ~/Dropbox/Code; ls'
 alias ctct='clear; cd ~/Dropbox/Code/CTCT; ls'
-alias nom='cd ~/Dropbox/Code/nomster; set_shell_to_local'
-#helpers
-alias set_shell_to_local='rbenv shell `rbenv local`'
 
 # Other
 alias sel='DRIVER=selenium'
