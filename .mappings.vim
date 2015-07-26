@@ -1,5 +1,6 @@
 nnoremap <space> <nop>
-nnoremap <BS> daw
+nnoremap <BS> <nop>
+nnoremap <CR> i<CR><esc>
 let mapleader = " "
 
 nnoremap <leader>a :Ag<space>
@@ -26,8 +27,8 @@ nnoremap <leader>s :sp<CR><C-w>j
 nnoremap <leader>c :close<CR>
 
 " buffer navigation
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
+nnoremap <C-h> :bp!<CR>
+nnoremap <C-l> :bn!<CR>
 nnoremap <leader>x :bd<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 

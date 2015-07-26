@@ -3,7 +3,6 @@ set shell=/bin/bash\ -i " enable interactive shell with :shell ex command
 " required
 set nocompatible
 filetype off
-filetype plugin indent on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,8 +19,9 @@ Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
 Plugin 'tpope/vim-fugitive' " git integration (:Gblame, :Gdiff, etc.)
 Plugin 'bling/vim-airline' " status/tabline
+Plugin 'tpope/vim-rails'
+Plugin 'kchmck/vim-coffee-script'
 " Plugin 'vim-ruby/vim-ruby'
-" Plugin 'tpope/vim-rails'
 
 " === All Plugins must be added above this line ===
 call vundle#end()            " required
@@ -37,8 +37,11 @@ let g:ctrlp_show_hidden = 1
 " source mappings
 :so ~/.mappings.vim
 
-" Color scheme
+" required (cont.)
 syntax enable
+filetype plugin indent on
+
+" Color scheme
 colorscheme Tomorrow-Night
 
 set autoindent
