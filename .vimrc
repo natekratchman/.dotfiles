@@ -19,12 +19,16 @@ Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
 Plugin 'tpope/vim-fugitive' " git integration (:Gblame, :Gdiff, etc.)
 Plugin 'bling/vim-airline' " status/tabline
-Plugin 'tpope/vim-rails'
-Plugin 'kchmck/vim-coffee-script'
-" Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails' " informs path of Rails file structure
+Plugin 'kchmck/vim-coffee-script' " coffeescript linter
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise' " auto-complete 'end' in Ruby
 
 " === All Plugins must be added above this line ===
-call vundle#end()            " required
+call vundle#end()
+
+" Scripts
+runtime macros/matchit.vim
 
 " Configure plugins
 let g:airline#extensions#tabline#enabled = 1
@@ -57,6 +61,9 @@ set shiftwidth=2             " normal mode indentation commands use 2 spaces
 set smartcase                " case-sensitive search if any caps
 set history=200
 set wildmode=longest,list
+set incsearch
+set scrolloff=5
+set backspace=indent,eol,start
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
