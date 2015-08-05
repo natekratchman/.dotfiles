@@ -39,6 +39,9 @@ vnoremap L $h
 nnoremap J 20jzz
 nnoremap K 20kzz
 
+" more movement
+map <tab> %
+
 " ctrl navigation in command/insert modes
 inoremap <C-h> <left>
 inoremap <C-l> <right>
