@@ -7,7 +7,7 @@ nnoremap <leader>a :Ag<space>
 
 " save/exit
 nnoremap <leader>w :w<CR>
-nnoremap <leader>wq ZZ
+nnoremap <leader>wq :wq<CR>
 
 " move/copy
 nnoremap <leader>m V:m
@@ -16,6 +16,12 @@ vnoremap <leader>m :m
 vnoremap <leader>t :t
 nnoremap <leader>d yyp
 vnoremap <leader>d :t'><CR>
+
+" registers
+noremap <leader>y "ny
+nnoremap <leader>yy "nyy
+noremap <leader>p "np
+vnoremap <leader><BS> "_d
 
 " window navigation/manipulation
 nnoremap <leader>h <C-w>h
@@ -33,8 +39,8 @@ nnoremap <leader>x :bd<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 
 " shift jumping
-nnoremap H ^
-nnoremap L $
+noremap H ^
+noremap L $
 vnoremap L $h
 nnoremap J 20jzz
 nnoremap K 20kzz
