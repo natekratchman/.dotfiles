@@ -1,8 +1,11 @@
+" general keys
 nnoremap <space> <nop>
 nnoremap <BS> <nop>
 nnoremap <CR> i<CR><esc>
+nnoremap ; :
 let mapleader = " "
 
+" plugins
 nnoremap <leader>a :Ag<space>
 
 " save/exit
