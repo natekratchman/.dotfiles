@@ -6,6 +6,7 @@ let mapleader = " "
 nnoremap <leader>a :Ag<space>
 
 " save/exit
+nnoremap <space><space> :w<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>wq :wq<CR>
 
