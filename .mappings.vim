@@ -11,7 +11,8 @@ nnoremap <leader>a :Ag<space>
 " save/exit
 nnoremap <space><space> :w<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>wq :wq<CR>
+nnoremap <leader>wq ZZ
+nnoremap <leader>qq :q!<CR>
 
 " move/copy
 nnoremap <leader>m V:m
