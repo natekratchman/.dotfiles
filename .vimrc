@@ -64,6 +64,7 @@ set wildmode=longest,list
 set incsearch
 set scrolloff=5
 set backspace=indent,eol,start
+set showcmd
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
