@@ -50,8 +50,11 @@ vnoremap L $h
 nnoremap J 20jzz
 nnoremap K 20kzz
 
-" more movement
+" matchit
 map <tab> %
+
+" switch btwn test and production code
+nnoremap <leader>. :A<CR>
 
 " ctrl navigation in command/insert modes
 inoremap <C-h> <left>
