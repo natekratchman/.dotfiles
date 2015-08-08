@@ -59,28 +59,21 @@ set listchars=tab:▸\ ,trail:·
 set number
 set shiftwidth=2             " normal mode indentation commands use 2 spaces
 set smartcase                " case-sensitive search if any caps
-set history=200
+set history=10000
 set wildmode=longest,list
 set incsearch
 set scrolloff=5
 set backspace=indent,eol,start
-set showcmd
+set showcmd                  " display incomplete commands
+set nobackup                 " don't make backups at all (incl. 3 below)
+set nowritebackup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
 hi CursorColumn cterm=NONE ctermbg=232
 set cursorline cursorcolumn
-
-" Save your swp files to a less annoying place than the current directory.
-" If you have .vim-swap in the current directory, it'll use that.
-" Otherwise it saves it to ~/.vim/swap, ~/tmp or .
-if isdirectory($HOME . '/.vim/swap') == 0
-  :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
-endif
-set directory=./.vim-swap//
-set directory+=~/.vim/swap//
-set directory+=~/tmp//
-set directory+=.
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
