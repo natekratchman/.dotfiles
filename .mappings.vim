@@ -3,6 +3,9 @@ nnoremap <space> <nop>
 nnoremap <BS> <nop>
 nnoremap <CR> i<CR><esc>
 nnoremap ; :
+inoremap <c-c> <esc>
+cnoremap <esc> <c-c>
+vnoremap <esc> <c-c>
 let mapleader = " "
 
 " plugins
