@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'tomtom/tcomment_vim' " comment toggling (N:gcc or V:gc)
-Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher (see below)
+Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher
 Plugin 'kien/ctrlp.vim' " directory search (sublime's cmd-T)
 Plugin 'Valloric/YouCompleteMe' " auto-completion
 Plugin 'scrooloose/nerdtree' " tree view for directory (<leader>d)
@@ -35,8 +35,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme = 'tomorrow'
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
+let NERDTreeRespectWildIgnore = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeAutoDeleteBuffer = 1
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_window = 'order:ttb,max:20'
 
 " source mappings
 :so ~/.mappings.vim
@@ -93,5 +99,3 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-" plugin settings
-let g:ctrlp_match_window = 'order:ttb,max:20'

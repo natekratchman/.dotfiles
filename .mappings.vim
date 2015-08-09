@@ -8,9 +8,6 @@ cnoremap <esc> <c-c>
 vnoremap <esc> <c-c>
 let mapleader = " "
 
-" plugins
-nnoremap <leader>a :Ag<space>
-
 " save/exit
 nnoremap <space><space> :w<CR>
 nnoremap <leader>w :w<CR>
@@ -53,12 +50,6 @@ vnoremap L $h
 nnoremap J 20jzz
 nnoremap K 20kzz
 
-" matchit
-map <tab> %
-
-" switch btwn test and production code
-nnoremap <leader>. :A<CR>
-
 " ctrl navigation in command/insert modes
 inoremap <C-h> <left>
 inoremap <C-l> <right>
@@ -81,3 +72,28 @@ nnoremap <right> <nop>
 " ...actually, <up> launches ex history
 nnoremap <up> :<up>
 
+"""""""""""
+" PLUGINS
+"""""""""""
+" open nerdtree directory at current file
+nnoremap \ :NERDTreeFind<CR>
+
+" Silver Searcher
+nnoremap <leader>a :Ag<space>
+
+" switch btwn production and test code (vim-rails)
+nnoremap <leader>. :A<CR>
+
+"""""""""""""""""""""""
+" RENAME CURRENT FILE
+"""""""""""""""""""""""
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <leader>n :call RenameFile()<cr>
