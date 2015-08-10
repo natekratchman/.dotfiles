@@ -27,6 +27,7 @@ noremap <leader>y "ny
 nnoremap <leader>yy "nyy
 noremap <leader>p "np
 vnoremap <leader><BS> "_d
+nnoremap <leader>2 @q
 
 " window navigation/manipulation
 nnoremap <leader>h <C-w>h
