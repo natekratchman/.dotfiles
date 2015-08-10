@@ -85,6 +85,9 @@ nnoremap <leader>a :Ag<space>
 " switch btwn production and test code (vim-rails)
 nnoremap <leader>. :A<CR>
 
+" matchit
+map <tab> %
+
 """""""""""""""""""""""
 " RENAME CURRENT FILE
 """""""""""""""""""""""
