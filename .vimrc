@@ -43,6 +43,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_match_window = 'order:ttb,max:20'
+let g:ctrlp_custom_ignore = '*/cassettes/*'
 
 " source mappings
 :so ~/.mappings.vim
@@ -79,6 +80,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set cmdheight=1
 set winwidth=79
+set modifiable
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
@@ -86,13 +88,13 @@ hi CursorColumn cterm=NONE ctermbg=232
 set cursorline cursorcolumn
 
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+" au BufWritePost .vimrc so ~/.vimrc
 
 " kill trailing whitespace
 autocmd BufWritePre {*.rb,*.js,*.coffee,*.html,*.sass,*.scss,*.haml} :%s/\s\+$//e
 
 " ignore these directories/files (for ctrl-p plugin)
-set wildignore+=*/tmp/*,*/log/*,*/artifacts/*,*/vendor/*,*/vagrant/*,*/system/*,*/public/*,*/doc/*,*/mock/*,*.sass-cache/*,*.so,*.swp,*.zip
+set wildignore+=*/cassettes/*,*/tmp/*,*/log/*,*/artifacts/*,*/vendor/*,*/vagrant/*,*/system/*,*/public/*,*/doc/*,*/mock/*,*.sass-cache/*,*.so,*.swp,*.zip
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
