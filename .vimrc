@@ -56,13 +56,15 @@ colorscheme Tomorrow-Night
 
 set autoindent
 set autoread                 " reload files when changed on disk, i.e. via `git checkout`
-set clipboard=unnamed 
+set clipboard=unnamed
 set encoding=utf-8
 set expandtab                " expand tabs to spaces
 set ignorecase               " case-insensitive search
 set list
 set listchars=tab:▸\ ,trail:·
 set number
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2             " normal mode indentation commands use 2 spaces
 set smartcase                " case-sensitive search if any caps
 set history=10000
@@ -75,6 +77,8 @@ set nobackup                 " don't make backups at all (incl. 3 below)
 set nowritebackup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set cmdheight=1
+set winwidth=79
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
