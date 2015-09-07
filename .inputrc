@@ -1,4 +1,4 @@
 # use vi inside bash shell (defaults to input mode; esc to enter command mode)
-set editing-mode vi
-set keymap vi-command
+# set editing-mode vi
+# set keymap vi-command
 
