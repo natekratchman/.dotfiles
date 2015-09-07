@@ -42,21 +42,10 @@ function prompt {
   # ♥ ⬗ ♠ - Keeping some cool ASCII Characters for reference
 
   export PS1="\n$Black$On_White\t$Default \$(ruby_version)\$(git_branch) $Green\W$Default\n$CHAR "
-  
-  # Nate's version 1 bash prompt (before fish)
-  # source ~/.git-prompt.sh
-  # export PS1="\[$Black\]\[$On_White\]\t\[$Green\]\[$On_Black\] \W\[$Cyan\]\$(__git_ps1)\n\[$Color_Off\]â™  "
-  
-  # Chris's Prompt
-  # export PS1="\[\e]2;\u@\h\a\[\e[37;44;1m\]\t$Default $Yellow\$(__rbenv_ps1)$Red\$(parse_git_branch) \[\e[32m\]\W$Default\n$CHAR "
-  
-  # Dinshaw's Prompt
-  # export PS1='\[\033[37m\]$(__rbenv_ps1) \W$(parse_git_branch)$\[\033[0m\] '
-  }
+}
 
-# Finally call the function
 prompt
- 
+
 # ENVIRONMENT VARIABLES
 # ===================== 
   # Configurations
@@ -82,7 +71,8 @@ prompt
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/Users/Nate/bin"
     export ELIXIR="/usr/local/bin/elixir"
     export ERLANG="/usr/local/bin/erl"
-    export PATH="$USR_PATHS:$ELIXIR:$ERLANG:$PYTHON:$HEROKU:$PATH"
+    export MACPORTS="/opt/local/bin:/opt/local/sbin"
+    export PATH="$USR_PATHS:$ELIXIR:$ERLANG:$PYTHON:$HEROKU:$MACPORTS:$PATH"
 
 # Final Configurations and Plugins
 # =====================
@@ -104,3 +94,4 @@ export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
 # load rbenv automatically
 eval "$(rbenv init -)"
+
