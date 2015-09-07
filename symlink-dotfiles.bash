@@ -1,8 +1,5 @@
 #!/bin/bash
 
-cd ~/
-git clone git@github.com:natekratchman/.dotfiles.git
-
 if [ -e ~/.bash_aliases ]; then
   mv ~/.bash_aliases ~/.bash_aliases-BACKUP
 fi
@@ -24,14 +21,6 @@ fi
 if [ -e ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc-BACKUP
 fi
-
-touch ~/.bash_aliases
-touch ~/.bash_profile
-touch ~/.bashrc
-touch ~/.inputrc
-touch ~/.mappings.vim
-touch ~/.tmux.config
-touch ~/.vimrc
 
 ln -s ~/.dotfiles/.bash_aliases ~/.bash_aliases
 ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
