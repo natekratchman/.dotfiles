@@ -26,17 +26,18 @@ alias dotfiles='cd ~/.dotfiles'
 alias blog='cd ~/Dropbox/Code/blog'
 alias code='clear; cd ~/Dropbox/Code; ls'
 
-# Other
-alias sel='DRIVER=selenium'
-alias sublbash="fc"
+# Bash overrides
 alias ls="ls -1G"
 alias lsa="ls -1AG"
-alias be="bundle exec"
-alias ber="bundle exec rspec"
 alias cl="clear"
+
+# Other
 alias editbash="vim ~/.bash_aliases"
 alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
+alias sel='DRIVER=selenium'
+alias be="bundle exec"
+alias ber="bundle exec rspec"
 alias her="heroku"
 alias jek="jekyll"
 
