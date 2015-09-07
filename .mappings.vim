@@ -3,6 +3,9 @@ nnoremap <space> <nop>
 nnoremap <BS> <nop>
 nnoremap <CR> i<CR><esc>
 nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
 inoremap <c-c> <esc>
 cnoremap <esc> <c-c>
 vnoremap <esc> <c-c>
