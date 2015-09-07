@@ -30,6 +30,8 @@ alias code='clear; cd ~/Dropbox/Code; ls'
 alias ls="ls -1G"
 alias lsa="ls -1AG"
 alias cl="clear"
+alias mv="mv -i"
+alias rm="rm -i"
 
 # Other
 alias editbash="vim ~/.bash_aliases"
