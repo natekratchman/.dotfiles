@@ -23,6 +23,7 @@ Plugin 'tpope/vim-rails' " informs path of Rails file structure
 Plugin 'kchmck/vim-coffee-script' " coffeescript linter
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise' " auto-complete 'end' in Ruby
+Plugin 'nelstrom/vim-visual-star-search' " makes * and # work in visual mode
 
 " === All Plugins must be added above this line ===
 call vundle#end()
