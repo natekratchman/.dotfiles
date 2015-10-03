@@ -51,8 +51,6 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 noremap H ^
 noremap L $
 vnoremap L $h
-nnoremap J 20jzz
-nnoremap K 20kzz
 
 " ctrl navigation in command/insert modes
 inoremap <C-h> <left>
@@ -62,19 +60,11 @@ cnoremap <C-j> <down>
 cnoremap <C-k> <up>
 cnoremap <C-l> <right>
 
-" destructive (bash) shortcuts
-noremap <C-u> d0
-noremap <C-k> d$
-noremap <C-d> <del>
-noremap <C-j> J
-
 " no arrow keys! Muahahahaha!
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-" ...actually, <up> launches ex history
-nnoremap <up> :<up>
 
 """""""""""
 " PLUGINS
@@ -88,19 +78,3 @@ nnoremap <leader>a :Ag<space>
 " switch btwn production and test code (vim-rails)
 nnoremap <leader>. :A<CR>
 
-" matchit
-map <tab> %
-
-"""""""""""""""""""""""
-" RENAME CURRENT FILE
-"""""""""""""""""""""""
-function! RenameFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
-map <leader>n :call RenameFile()<cr>
