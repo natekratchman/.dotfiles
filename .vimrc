@@ -18,7 +18,7 @@ Plugin 'scrooloose/nerdtree' " tree view for directory (<leader>d)
 Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
 Plugin 'tpope/vim-fugitive' " git integration (:Gblame, :Gdiff, etc.)
-Plugin 'bling/vim-airline' " status/tabline
+" Plugin 'bling/vim-airline' " status/tabline
 Plugin 'tpope/vim-rails' " informs path of Rails file structure
 Plugin 'kchmck/vim-coffee-script' " coffeescript linter
 Plugin 'vim-ruby/vim-ruby'
@@ -32,10 +32,10 @@ call vundle#end()
 runtime macros/matchit.vim
 
 " Configure plugins
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'tomorrow'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline_theme = 'tomorrow'
 let NERDTreeShowHidden = 1
 let NERDTreeRespectWildIgnore = 1
 let NERDTreeQuitOnOpen = 1
