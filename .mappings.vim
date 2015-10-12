@@ -13,15 +13,9 @@ let mapleader = " "
 
 " save/exit
 nnoremap <space><space> :w<CR>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>wq ZZ
-nnoremap <leader>qq :q!<CR>
+nnoremap <leader>qq ZQ
 
-" move/copy
-nnoremap <leader>m V:m
-nnoremap <leader>t V:t
-vnoremap <leader>m :m
-vnoremap <leader>t :t
+" duplication
 nnoremap <leader>d yyp
 vnoremap <leader>d :t'><CR>
 
@@ -41,10 +35,10 @@ nnoremap <leader>v :vs<CR><C-w>l
 nnoremap <leader>s :sp<CR><C-w>j
 nnoremap <leader>c :close<CR>
 
-" buffer navigation
-nnoremap <C-h> :bp!<CR>
-nnoremap <C-l> :bn!<CR>
-nnoremap <leader>x :bd<CR>
+" tab navigation
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <leader>x :tabc<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 
 " shift jumping
@@ -71,10 +65,4 @@ nnoremap <right> <nop>
 """""""""""
 " open nerdtree directory at current file
 nnoremap \ :NERDTreeFind<CR>
-
-" Silver Searcher
-nnoremap <leader>a :Ag<space>
-
-" switch btwn production and test code (vim-rails)
-nnoremap <leader>. :A<CR>
 
