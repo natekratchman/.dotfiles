@@ -12,10 +12,6 @@ cnoremap <esc> <c-c>
 vnoremap <esc> <c-c>
 let mapleader = " "
 
-" save/exit
-nnoremap <space><space> :w<CR>
-nnoremap <leader>qq ZQ
-
 " duplication
 nnoremap <leader>d yyp
 vnoremap <leader>d :t'><CR>
