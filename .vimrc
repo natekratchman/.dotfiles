@@ -82,6 +82,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set cmdheight=1
 set winwidth=79
 set modifiable
+set hls
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232

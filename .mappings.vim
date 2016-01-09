@@ -1,5 +1,6 @@
 " general keys
 nnoremap <space> <nop>
+nnoremap <space><space> :nohls<CR>
 nnoremap <BS> <nop>
 nnoremap <CR> i<CR><esc>
 nnoremap ; :
