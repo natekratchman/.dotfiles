@@ -25,6 +25,7 @@ alias ..="cd .."
 alias dotfiles='cd ~/.dotfiles'
 alias blog='cd ~/Dropbox/Code/blog'
 alias code='clear; cd ~/Dropbox/Code; ls'
+alias bird='clear; cd ~/Dropbox/Code/bird-and-stone/threepointoh'
 
 # Bash overrides
 alias ls="ls -1G"
@@ -37,10 +38,8 @@ alias rm="rm -i"
 alias editbash="vim ~/.bash_aliases"
 alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
-alias sel='DRIVER=selenium'
 alias be="bundle exec"
 alias ber="bundle exec rspec"
-alias her="heroku"
 alias jek="jekyll"
 
 # postgres
