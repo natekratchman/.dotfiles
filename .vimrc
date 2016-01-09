@@ -24,6 +24,7 @@ Plugin 'kchmck/vim-coffee-script' " coffeescript linter
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise' " auto-complete 'end' in Ruby
 Plugin 'nelstrom/vim-visual-star-search' " makes * and # work in visual mode
+Plugin 'tpope/vim-abolish' " subversion (:Subvert/child{,ren}/adult{,s}/g) and case coercion (crs: snake_case, crm: MixedCase, crc: camelCase, cru: UPPER_CASE)
 
 " === All Plugins must be added above this line ===
 call vundle#end()
