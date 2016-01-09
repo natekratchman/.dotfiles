@@ -48,6 +48,7 @@ let g:ctrlp_custom_ignore = '*/cassettes/*'
 
 " source mappings
 :so ~/.mappings.vim
+:cmapclear
 
 " required (cont.)
 syntax enable
