@@ -31,8 +31,8 @@ alias bird='clear; cd ~/Dropbox/Code/bird-and-stone/threepointoh'
 alias ls="ls -1G"
 alias lsa="ls -1AG"
 alias cl="clear"
-alias mv="mv -i"
-alias rm="rm -i"
+# alias mv="mv -i"
+# alias rm="rm -i"
 
 # Other
 alias editbash="vim ~/.bash_aliases"
