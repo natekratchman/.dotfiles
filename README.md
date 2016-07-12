@@ -1,0 +1,3 @@
+- clone repo into ~
+- run `symlink-dotfiles` to make a backup of local config files and symlink to your new dotfiles
+- (optional) run `unlink-dotfiles` to remove dotfiles and return local config files to how they were (ninja!)
