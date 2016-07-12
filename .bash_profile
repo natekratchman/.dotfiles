@@ -92,6 +92,9 @@ fi
 # SSL Cert Fix
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
-# load rbenv automatically
+# load rbenv
 eval "$(rbenv init -)"
 
+# load nvm
+export NVM_DIR="/Users/Nate/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
