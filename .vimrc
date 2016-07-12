@@ -14,11 +14,10 @@ Plugin 'scrooloose/nerdcommenter' " comment toggling
 Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher
 Plugin 'kien/ctrlp.vim' " directory search (sublime's cmd-T)
 Plugin 'Valloric/YouCompleteMe' " auto-completion
-Plugin 'scrooloose/nerdtree' " tree view for directory (<leader>d)
+Plugin 'scrooloose/nerdtree' " tree view for directory
 Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
 Plugin 'tpope/vim-fugitive' " git integration (:Gblame, :Gdiff, etc.)
-" Plugin 'bling/vim-airline' " status/tabline
 Plugin 'tpope/vim-rails' " informs path of Rails file structure
 Plugin 'kchmck/vim-coffee-script' " coffeescript linter
 Plugin 'vim-ruby/vim-ruby'
@@ -30,14 +29,6 @@ Plugin 'tpope/vim-repeat' " enable repeat for tpope plugins
 " === All Plugins must be added above this line ===
 call vundle#end()
 
-" Scripts
-runtime macros/matchit.vim
-
-" Configure plugins
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#left_sep = ' '
-" let g:airline#extensions#tabline#left_alt_sep = '|'
-" let g:airline_theme = 'tomorrow'
 let NERDTreeShowHidden = 1
 let NERDTreeRespectWildIgnore = 1
 let NERDTreeQuitOnOpen = 1
@@ -55,6 +46,9 @@ let g:ctrlp_custom_ignore = '*/cassettes/*'
 " required (cont.)
 syntax enable
 filetype plugin indent on
+
+" enable matchit script (match opening/closing tags with %)
+packadd! matchit
 
 " Color scheme
 colorscheme Tomorrow-Night
@@ -86,11 +80,11 @@ set cmdheight=1
 set winwidth=79
 set modifiable
 set hls
+set statusline=%f%m
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
 hi CursorColumn cterm=NONE ctermbg=232
-set cursorline cursorcolumn
 
 " automatically reload vimrc when it's saved
 " au BufWritePost .vimrc so ~/.vimrc
