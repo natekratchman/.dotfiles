@@ -1,31 +1,6 @@
-# Git
-alias ga.="git add ."
-alias ga="git add"
-alias gb="git branch"
-alias gba="git branch --all"
-alias gcl="git clone"
-alias gc="git commit"
-alias gca="git commit --amend"
-alias gcm="git commit -m"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gcom="git checkout master"
-alias gd="git diff"
-alias gf="git fetch"
-alias gfa="git fetch --all"
-alias gl="git log -5 --no-merges --pretty=format:'%Cgreen%h %Creset%s %Cblue%an (%ar)'"
-alias gla="git log --pretty=format:'%Cgreen%h %Creset%s %Cblue%an (%ar)'"
-alias gp="git push"
-alias gpom="git push origin master"
-alias gst="git status"
-
 # Quick Navigation
 alias up="cd .."
 alias ..="cd .."
-alias dotfiles='cd ~/.dotfiles'
-alias blog='cd ~/Dropbox/Code/blog'
-alias code='clear; cd ~/Dropbox/Code; ls'
-alias bird='clear; cd ~/Dropbox/Code/bird-and-stone/threepointoh'
 
 # Bash overrides
 alias ls="ls -1G"
@@ -40,10 +15,6 @@ alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
-alias jek="jekyll"
-
-# postgres
-# alias pgstart="postgres -D /usr/local/var/postgres"
 
 # Open new Terminal tabs from the command line
   # Usage:
