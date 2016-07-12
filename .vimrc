@@ -10,7 +10,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'tomtom/tcomment_vim' " comment toggling (N:gcc or V:gc)
+Plugin 'scrooloose/nerdcommenter' " comment toggling
 Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher
 Plugin 'kien/ctrlp.vim' " directory search (sublime's cmd-T)
 Plugin 'Valloric/YouCompleteMe' " auto-completion
