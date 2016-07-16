@@ -35,11 +35,8 @@ nnoremap <leader>yy "nyy
 noremap <leader>p "np
 vnoremap <leader><BS> "_d
 
-" open .vimrc file in new tab (think <D-,> to open Preferences, but with Shift)
-map <D-<> :tabedit ~/.vimrc<CR>
-
-" reload .vimrc
-map <leader>rv  :source ~/.vimrc<CR>
+" source (reload) current file
+map <leader>rv :source <C-r>%<CR>
 
 " auto-indent entire file
 nmap <leader>= gg=G``
@@ -48,15 +45,12 @@ nmap <leader>= gg=G``
 nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
 
-" open directory
+" open directory (nerdtree)
 map \ :NERDTreeToggle<CR>
-" open directory at current file (nerdtree)
+" ...at current file
 map \| :NERDTreeFind<CR>
 
-" toggle comment (tcomment_vim)
-nmap <leader>/ gcc
-
-" git blame
+" git blame (tpope/vim-fugitive)
 map <leader>g :Gblame<CR>
 
 " toggle comment
@@ -67,4 +61,4 @@ cmap <C-a> <C-b>
 
 " Copy current file path to system clipboard
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
