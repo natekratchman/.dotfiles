@@ -41,7 +41,7 @@ function prompt {
   local        CHAR="♠"
   # ♥ ⬗ ♠ - Keeping some cool ASCII Characters for reference
 
-  export PS1="\n$Black$On_White\t$Default \$(ruby_version)\$(git_branch) $Green\W$Default\n$CHAR "
+  export PS1="\n$Black$On_White\t$Default $Green\W$Default\$(git_branch)\n$CHAR "
 }
 
 prompt
