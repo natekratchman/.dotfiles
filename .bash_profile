@@ -65,14 +65,14 @@ prompt
     export EDITOR=vim
  
   # Paths
-    # export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+    export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
     export HEROKU="/usr/local/heroku/bin"
-    export PYTHON="/usr/local/share/python"
-    export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/Users/Nate/bin"
-    export ELIXIR="/usr/local/bin/elixir"
-    export ERLANG="/usr/local/bin/erl"
-    export MACPORTS="/opt/local/bin:/opt/local/sbin"
-    export PATH="$USR_PATHS:$ELIXIR:$ERLANG:$PYTHON:$HEROKU:$MACPORTS:$PATH"
+    #export ELIXIR="/usr/local/bin/elixir"
+    #export ERLANG="/usr/local/bin/erl"
+    #export MACPORTS="/opt/local/bin:/opt/local/sbin"
+    #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
+    #export PYTHON="/usr/local/share/python"
+    export PATH="$USR_PATHS:$HEROKU:$PATH"
 
 # Final Configurations and Plugins
 # =====================
