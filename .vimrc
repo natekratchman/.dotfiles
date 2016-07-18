@@ -84,6 +84,8 @@ set winwidth=79
 set modifiable
 set hls
 set statusline=%f%m
+set splitbelow
+set splitright
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
