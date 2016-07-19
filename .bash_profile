@@ -67,12 +67,13 @@ prompt
   # Paths
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
     export HEROKU="/usr/local/heroku/bin"
+    export POSTGRES="/Applications/Postgres.app/Contents/Versions/latest/bin"
     #export ELIXIR="/usr/local/bin/elixir"
     #export ERLANG="/usr/local/bin/erl"
     #export MACPORTS="/opt/local/bin:/opt/local/sbin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PYTHON="/usr/local/share/python"
-    export PATH="$USR_PATHS:$HEROKU:$PATH"
+    export PATH="$POSTGRES:$HEROKU:$USR_PATHS:$PATH"
 
 # Final Configurations and Plugins
 # =====================
