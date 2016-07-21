@@ -42,7 +42,8 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:ctrlp_custom_ignore = '*/cassettes/*'
 
-" source mappings
+" source plugins and mappings
+:so ~/.vim/plugins/*.vim
 :so ~/.mappings.vim
 :cmapclear
 

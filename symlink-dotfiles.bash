@@ -22,6 +22,16 @@ if [ -e ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc-BACKUP
 fi
 
+if [ ! -d ~/.vim/ ]; then
+  mkdir ~/.vim/
+fi
+if [ ! -d ~/.vim/plugins/ ]; then
+  mkdir ~/.vim/plugins/
+fi
+if [ -e ~/.vim/plugins/story_id.vim ]; then
+  mv ~/.vim/plugins/story_id.vim ~/.vim/plugins/story_id.vim-BACKUP
+fi
+
 ln -s ~/.dotfiles/.bash_aliases ~/.bash_aliases
 ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
@@ -30,3 +40,4 @@ ln -s ~/.dotfiles/.mappings.vim ~/.mappings.vim
 ln -s ~/.dotfiles/.tmux.config ~/.tmux.config
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
+ln -s ~/.dotfiles/.vim/plugins/story_id.vim ~/.vim/plugins/story_id.vim

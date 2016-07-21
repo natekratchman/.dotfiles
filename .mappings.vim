@@ -67,3 +67,6 @@ cmap <C-a> <C-b>
 " Copy current file path to system clipboard
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+
+" See .vim/plugins/story_id.vim
+autocmd FileType gitcommit nnoremap <leader>i :Sid<CR>

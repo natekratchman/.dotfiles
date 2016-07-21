@@ -7,6 +7,7 @@ rm ~/.inputrc
 rm ~/.mappings.vim
 rm ~/.tmux.config
 rm ~/.vimrc
+rm ~/.vim/plugins/story_id.vim
 
 rm -rf ~/.dotfiles
 
@@ -30,5 +31,8 @@ if [ -e ~/.tmux.config-BACKUP ]; then
 fi
 if [ -e ~/.vimrc-BACKUP ]; then
   mv ~/.vimrc-BACKUP ~/.vimrc
+fi
+if [ -e ~/.vim/plugins/story_id.vim-BACKUP ]; then
+  mv ~/.vim/plugins/story_id.vim-BACKUP ~/.vim/plugins/story_id.vim
 fi
 
