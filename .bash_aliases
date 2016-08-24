@@ -1,6 +1,7 @@
 # Quick Navigation
 alias up="cd .."
 alias ..="cd .."
+alias code="cd ~/Code; ls"
 
 # Bash overrides
 alias ls="ls -1G"
@@ -15,6 +16,7 @@ alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
+alias her="heroku"
 
 # Open new Terminal tabs from the command line
   # Usage:
