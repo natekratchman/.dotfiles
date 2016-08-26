@@ -17,6 +17,7 @@ alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
 alias her="heroku"
+alias reindex-ctags="rm tags; ctags -R app lib spec"
 
 # Open new Terminal tabs from the command line
   # Usage:
