@@ -5,7 +5,7 @@ cnoremap <esc> <c-c>
 vnoremap <esc> <c-c>
 
 nnoremap <space> :nohls<cr>
-nnoremap <BS> <nop>
+nnoremap <BS> x
 nnoremap <CR> i<CR><esc>
 
 " trigger macro in register q
