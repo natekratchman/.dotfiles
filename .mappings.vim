@@ -71,5 +71,8 @@ cmap <C-a> <C-b>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 map <leader>c :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 
-" See .vim/plugins/story_id.vim
-autocmd FileType gitcommit nnoremap <leader>i :Sid<CR>
+" Plugins
+" .vim/plugins/story_id.vim
+autocmd FileType gitcommit nnoremap <leader>i :InsertStoryId<CR>
+" .vim/plugins/promote_to_let.vim
+nnoremap <leader>l :PromoteToLet<CR>

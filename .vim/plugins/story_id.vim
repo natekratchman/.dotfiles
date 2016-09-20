@@ -18,4 +18,4 @@ function! InsertStoryId()
   exec "normal! ".sid_command
 endfunction
 
-command! Sid :call InsertStoryId()
+command! InsertStoryId :call InsertStoryId()
