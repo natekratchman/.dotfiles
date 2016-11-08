@@ -1,4 +1,5 @@
 source ~/.bash_aliases
+source ~/.bash_profile.local
 
 ## PROMPT FORMATTING
 # ===================

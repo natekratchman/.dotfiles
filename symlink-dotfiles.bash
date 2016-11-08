@@ -6,6 +6,9 @@ fi
 if [ -e ~/.bash_profile ]; then
   mv ~/.bash_profile ~/.bash_profile-BACKUP
 fi
+if ! [ -e ~/.bash_profile.local ]; then
+  touch ~/.bash_profile.local
+fi
 if [ -e ~/.bashrc ]; then
   mv ~/.bashrc ~/.bashrc-BACKUP
 fi
