@@ -89,6 +89,7 @@ set splitbelow
 set splitright
 set guicursor+=n-v-c:blinkon0 " disable cursor blinking
 set tags=./tags;              " source ctags tags file, starting in current directory and traversing up (;) until found
+set noballooneval             " disable help bubble popup
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
