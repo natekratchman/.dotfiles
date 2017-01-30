@@ -19,6 +19,7 @@ alias ber="bundle exec rspec"
 alias her="heroku"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
+alias glom='git log --oneline master..'
 
 # Open new Terminal tabs from the command line
   # Usage:
