@@ -126,3 +126,8 @@ _tmuxinator() {
 
 complete -F _tmuxinator tmuxinator mux
 alias mux="tmuxinator"
+
+#git auto-completion (source local script)
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
