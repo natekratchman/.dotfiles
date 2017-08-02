@@ -28,6 +28,7 @@ Plugin 'tpope/vim-repeat' " enable repeat for tpope plugins
 Plugin 'bkad/CamelCaseMotion' " add camel-wise motions (mimic word-wise motions)
 Plugin 'slim-template/vim-slim' " syntax highlighting for Slim
 Plugin 'tpope/vim-haml' " syntax highlighting for Haml
+Plugin 'mxw/vim-jsx' " syntax highlighting for jsx
 
 " === All Plugins must be added above this line ===
 call vundle#end()
