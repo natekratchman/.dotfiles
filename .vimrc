@@ -29,6 +29,7 @@ Plugin 'bkad/CamelCaseMotion' " add camel-wise motions (mimic word-wise motions)
 Plugin 'slim-template/vim-slim' " syntax highlighting for Slim
 Plugin 'tpope/vim-haml' " syntax highlighting for Haml
 Plugin 'mxw/vim-jsx' " syntax highlighting for jsx
+Plugin 'christoomey/vim-conflicted' " aids in resolving git merge and rebase conflicts
 
 " === All Plugins must be added above this line ===
 call vundle#end()
@@ -90,6 +91,7 @@ set splitbelow
 set splitright
 set guicursor+=n-v-c:blinkon0 " disable cursor blinking
 set tags=./tags;              " source ctags tags file, starting in current directory and traversing up (;) until found
+set stl+=%{ConflictedVersion()} " display the version name of each split (upstream/working/local) in the vim statusbar (vim-conflicted)
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
