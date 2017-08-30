@@ -30,6 +30,7 @@ Plugin 'slim-template/vim-slim' " syntax highlighting for Slim
 Plugin 'tpope/vim-haml' " syntax highlighting for Haml
 Plugin 'mxw/vim-jsx' " syntax highlighting for jsx
 Plugin 'christoomey/vim-conflicted' " aids in resolving git merge and rebase conflicts
+Plugin 'smerrill/vcl-vim-plugin' " syntax highlighting for VCL
 
 " === All Plugins must be added above this line ===
 call vundle#end()
