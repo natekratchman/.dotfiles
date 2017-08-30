@@ -22,6 +22,7 @@ alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(gi
 alias glom='git log --oneline master..'
 alias gcom='git co master'
 alias grim='git rebase -i master'
+alias vim-plugin-install='vim +PluginInstall +qall'
 
 # Open new Terminal tabs from the command line
   # Usage:
