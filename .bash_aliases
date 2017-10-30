@@ -24,6 +24,7 @@ alias gcom='git co master'
 alias grim='git rebase -i master'
 alias s='git status'
 alias d='git diff'
+alias dc='git diff --cached'
 alias vim-plugin-install='vim +PluginInstall +qall'
 
 # Open new Terminal tabs from the command line
