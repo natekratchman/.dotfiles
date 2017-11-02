@@ -17,6 +17,8 @@ alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
 alias her="heroku"
+alias dockup='docker-compose up'
+alias dockstop='docker-compose stop'
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
 alias glom='git log --oneline master..'
@@ -28,6 +30,17 @@ alias dc='git diff --cached'
 alias b='git branch'
 alias bm='git branch --merged'
 alias vim-plugin-install='vim +PluginInstall +qall'
+
+# Docker
+function dock () {
+  local args="$@"
+
+  if [[ `docker-compose ps app | grep Up` == *'Up'* ]]; then
+    docker-compose exec app $args
+  else
+    docker-compose run --rm app $args
+  fi
+}
 
 # Open new Terminal tabs from the command line
   # Usage:
