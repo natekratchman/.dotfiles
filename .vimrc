@@ -44,6 +44,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:ctrlp_custom_ignore = '*/cassettes/*'
+let g:ctrlp_switch_buffer = 'et' " If a file is already open, open it again in a new pane instead of switching to the existing pane
 
 " source plugins and mappings
 :so ~/.vim/plugins/*.vim
