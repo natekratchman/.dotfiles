@@ -34,6 +34,17 @@ alias b='git branch'
 alias bm='git branch --merged'
 alias vim-plugin-install='vim +PluginInstall +qall'
 
+function process-on-port () {
+  local args="$@"
+
+  if [ -z "$args" ]; then
+    echo "Usage: process-on-port [port]"
+    return 1
+  fi
+
+  lsof -n -i4TCP:$args
+}
+
 # Docker
 function dock () {
   local args="$@"
