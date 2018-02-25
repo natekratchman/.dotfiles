@@ -31,8 +31,9 @@ map <silent> <leader>w <Plug>CamelCaseMotion_w
 map <silent> <leader>b <Plug>CamelCaseMotion_b
 map <silent> <leader>e <Plug>CamelCaseMotion_e
 
-" quick binding
+" auto 'text expand' shortcuts
 inoremap <c-b> binding.pry<esc>
+inoremap <c-n> &nbsp;<esc>
 
 " toggle cursor highlighting
 nnoremap <leader>h :set cursorline! cursorcolumn!<cr>
