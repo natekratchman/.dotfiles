@@ -42,14 +42,33 @@ alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias vim-plugin-install='vim +PluginInstall +qall'
 
 function process-on-port () {
-  local args="$@"
+  local port="$@"
 
-  if [ -z "$args" ]; then
+  if [ -z "$port" ]; then
     echo "Usage: process-on-port [port]"
     return 1
   fi
 
-  lsof -n -i4TCP:$args
+  lsof -n -i4TCP:$port
+}
+
+function kill-process-on-port () {
+  local port="$@"
+
+  if [ -z "$port" ]; then
+    echo "Usage: kill-process-on-port [port]"
+    return 1
+  fi
+
+  local process_id=`process-on-port $port | grep -v PID | cut -d ' ' -f 2`
+
+  if [ -z "$process_id" ]; then
+    echo "No process running on port $port."
+    return 1
+  fi
+
+  kill -9 $process_id
+  echo "Killed process $process_id on port $port."
 }
 
 # Docker
