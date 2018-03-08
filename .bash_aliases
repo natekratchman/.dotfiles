@@ -10,19 +10,7 @@ alias cl="clear"
 # alias mv="mv -i"
 # alias rm="rm -i"
 
-# Other
-alias editbash="vim ~/.bash_aliases"
-alias editvim="vim ~/.mappings.vim"
-alias reload="source ~/.bash_profile"
-alias be="bundle exec"
-alias ber="bundle exec rspec"
-alias her="heroku"
-alias dockup='docker-compose up -d'
-alias dockstop='docker-compose stop'
-alias dr='dock rspec'
-alias dock-maji-start='dock foreman start -f Procfile.dev'
-alias maji-start='foreman start -f Procfile.dev'
-alias reindex-ctags="rm tags; ctags -R app lib spec"
+# Git
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
 alias glom='git log --oneline master..'
 alias gcom='git co master'
@@ -32,6 +20,25 @@ alias d='git diff'
 alias dc='git diff --cached'
 alias b='git branch'
 alias bm='git branch --merged'
+
+# Docker
+alias dockup='docker-compose up -d'
+alias dockstop='docker-compose stop'
+alias dr='dock rspec'
+alias dock-maji-start='dock foreman start -f Procfile.dev'
+
+# CW
+alias maji-start='foreman start -f Procfile.dev'
+
+# Other
+alias editbash="vim ~/.bash_aliases"
+alias editvim="vim ~/.mappings.vim"
+alias reload="source ~/.bash_profile"
+alias be="bundle exec"
+alias ber="bundle exec rspec"
+alias her="heroku"
+alias maji-start='foreman start -f Procfile.dev'
+alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias vim-plugin-install='vim +PluginInstall +qall'
 
 function process-on-port () {
