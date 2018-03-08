@@ -29,6 +29,7 @@ alias dock-maji-start='dock foreman start -f Procfile.dev'
 
 # CW
 alias maji-start='foreman start -f Procfile.dev'
+alias her-maji-prod='heroku run rails c -a maji-production'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
@@ -37,7 +38,6 @@ alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
 alias her="heroku"
-alias maji-start='foreman start -f Procfile.dev'
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias vim-plugin-install='vim +PluginInstall +qall'
 
