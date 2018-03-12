@@ -30,6 +30,7 @@ alias dock-maji-start='dock foreman start -f Procfile.dev'
 # CW
 alias maji-start='foreman start -f Procfile.dev'
 alias her-maji-prod='heroku run rails c -a maji-production'
+alias her-picha-prod='heroku run rails c -a cw-picha-production'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
