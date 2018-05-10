@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdcommenter' " comment toggling
 Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher
-Plugin 'kien/ctrlp.vim' " directory search (sublime's cmd-T)
+Plugin 'kien/ctrlp.vim' " directory search
 Plugin 'Valloric/YouCompleteMe' " auto-completion
 Plugin 'scrooloose/nerdtree' " tree view for directory
 Plugin 'airblade/vim-gitgutter' " git gutter
@@ -108,12 +108,17 @@ autocmd BufWritePre {*.rb,*.js,*.coffee,*.html,*.sass,*.scss,*.haml} :%s/\s\+$//
 " ignore these directories/files (for ctrl-p plugin)
 set wildignore+=*/cassettes/*,*/tmp/*,*/log/*,*/artifacts/*,*/vendor/*,*/vagrant/*,*/system/*,*/public/*,*/doc/*,*/mock/*,*.sass-cache/*,*.so,*.swp,*.zip
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+" Use `ag` instead of `grep` because it is so much faster
 if executable('ag')
-  " Use Ag over Grep
+  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+  let g:ctrlp_user_command = 'ag %s -l --ignore-dir=spec/cassettes --nocolor -g ""'
 
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  " Use ag instead of ack
+  let g:ackprg = 'ag --vimgrep --ignore-dir=spec/cassettes'
+endif
