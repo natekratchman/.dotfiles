@@ -13,6 +13,7 @@ alias cl="clear"
 # Git
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
 alias glom='git log --oneline master..'
+alias glo='git log --oneline'
 alias gcom='git co master'
 alias grim='git rebase -i master'
 alias s='git status'
