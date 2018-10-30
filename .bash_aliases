@@ -39,6 +39,7 @@ alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
 alias be="bundle exec"
 alias ber="bundle exec rspec"
+alias g="genie"
 alias her="heroku"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias vim-plugin-install='vim +PluginInstall +qall'
