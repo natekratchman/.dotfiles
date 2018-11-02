@@ -29,7 +29,7 @@ alias dr='dock rspec'
 alias dock-maji-start='dock foreman start -f Procfile.dev'
 
 # CW
-alias maji-start='foreman start -f Procfile.dev'
+alias maji-start='kill-process-on-port 1025; foreman start -f Procfile.dev'
 alias her-maji-prod='heroku run rails c -a maji-production'
 alias her-picha-prod='heroku run rails c -a cw-picha-production'
 
