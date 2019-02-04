@@ -34,6 +34,7 @@ map <silent> <leader>e <Plug>CamelCaseMotion_e
 " auto 'text expand' shortcuts
 inoremap <c-b> binding.pry<esc>
 inoremap <c-n> &nbsp;<esc>
+inoremap <c-p> puts "#{self.class}##{__method__}"<esc>
 
 " toggle cursor highlighting
 nnoremap <leader>h :set cursorline! cursorcolumn!<cr>
