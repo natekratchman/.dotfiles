@@ -100,6 +100,11 @@ set stl+=%{ConflictedVersion()} " display the version name of each split (upstre
 hi CursorLine   cterm=NONE ctermbg=232
 hi CursorColumn cterm=NONE ctermbg=232
 
+" vim-indent-guides custom color scheme
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 " automatically reload vimrc when it's saved
 " au BufWritePost .vimrc so ~/.vimrc
 
