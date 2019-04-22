@@ -75,7 +75,8 @@ prompt
     #export MACPORTS="/opt/local/bin:/opt/local/sbin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PYTHON="/usr/local/share/python"
-    export PATH="$WORKON_PATH:$POSTGRES:$HEROKU:$USR_PATHS:$PATH"
+    export PHP5_PATH='/usr/local/php5/bin'
+    export PATH="$PHP5_PATH:$WORKON_PATH:$POSTGRES:$HEROKU:$USR_PATHS:$PATH"
 
 # Final Configurations and Plugins
 # =====================
