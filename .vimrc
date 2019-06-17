@@ -32,6 +32,7 @@ Plugin 'mxw/vim-jsx' " syntax highlighting for jsx
 Plugin 'christoomey/vim-conflicted' " aids in resolving git merge and rebase conflicts
 Plugin 'smerrill/vcl-vim-plugin' " syntax highlighting for VCL
 Plugin 'nathanaelkane/vim-indent-guides' " visually displays indent levels
+Plugin 'tpope/vim-rhubarb' " enables :Gbrowse (from fugitive.vim) to open GitHub URLs
 
 " === All Plugins must be added above this line ===
 call vundle#end()
