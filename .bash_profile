@@ -69,13 +69,14 @@ prompt
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
     export HEROKU="/usr/local/heroku/bin"
     export WORKON_PATH='/Users/natekratchman/code/natekratchman/workon/'
+    export NODE_PATH="/usr/local/opt/node@10/bin"
     #export ELIXIR="/usr/local/bin/elixir"
     #export ERLANG="/usr/local/bin/erl"
     #export MACPORTS="/opt/local/bin:/opt/local/sbin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PYTHON="/usr/local/share/python"
     export PHP5_PATH='/usr/local/php5/bin'
-    export PATH="$PHP5_PATH:$WORKON_PATH:$HEROKU:$USR_PATHS:$PATH"
+    export PATH="$NODE_PATH:$PHP5_PATH:$WORKON_PATH:$HEROKU:$USR_PATHS:$PATH"
 
 # Final Configurations and Plugins
 # =====================
