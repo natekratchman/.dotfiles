@@ -71,13 +71,16 @@ prompt
     export WORKON_PATH='/Users/natekratchman/code/natekratchman/workon/'
     export NODE_PATH="/usr/local/opt/node@10/bin"
     export POSTGRES_PATH="/usr/local/opt/postgresql@9.4/bin"
+    export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
     #export ELIXIR="/usr/local/bin/elixir"
     #export ERLANG="/usr/local/bin/erl"
     #export MACPORTS="/opt/local/bin:/opt/local/sbin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PYTHON="/usr/local/share/python"
     export PHP5_PATH='/usr/local/php5/bin'
-    export PATH="$POSTGRES_PATH:$NODE_PATH:$PHP5_PATH:$WORKON_PATH:$HEROKU:$USR_PATHS:$PATH"
+    export PATH="$MYSQL_PATH:$POSTGRES_PATH:$NODE_PATH:$PHP5_PATH:$WORKON_PATH:$HEROKU:$USR_PATHS:$PATH"
+
+    export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 
 # Final Configurations and Plugins
 # =====================
