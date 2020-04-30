@@ -31,7 +31,8 @@ alias dr='dock rspec'
 alias dock-maji-start='dock foreman start -f Procfile.dev'
 
 # CW
-alias maji-start='kill-process-on-port 1025; foreman start -f Procfile.dev'
+alias maji-start='kill-process-on-port 1025; foreman start -f Procfile.dev.local'
+alias maji-server='bundle exec puma -C ./config/puma.rb'
 alias karma-start='./node_modules/.bin/karma start --no-auto-watch --browsers ChromeHeadless --port 9876'
 alias her-maji-prod='heroku run rails c -a maji-production'
 alias her-picha-prod='heroku run rails c -a cw-picha-production'
