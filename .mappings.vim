@@ -38,7 +38,7 @@ vnoremap <c-n> s&nbsp;<esc>
 inoremap <c-p> puts "#{self.class}##{__method__}"<esc>
 
 " toggle cursor highlighting
-nnoremap <leader>h :set cursorline! cursorcolumn!<cr>
+nnoremap <leader>h :set cursorline!<cr>
 
 " fun with registers
 noremap <leader>y "ny

@@ -99,7 +99,7 @@ set stl+=%{ConflictedVersion()} " display the version name of each split (upstre
 
 " Setup crosshairs
 hi CursorLine   cterm=NONE ctermbg=232
-hi CursorColumn cterm=NONE ctermbg=232
+set cursorline!
 
 " vim-indent-guides custom color scheme
 set ts=4 sw=4 et
