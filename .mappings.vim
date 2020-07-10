@@ -46,9 +46,6 @@ nnoremap <leader>yy "nyy
 noremap <leader>p "np
 vnoremap <leader><BS> "_d
 
-" source (reload) current file
-map <leader>rv :source <C-r>%<CR>
-
 " auto-indent entire file
 nmap <leader>= gg=G``
 
