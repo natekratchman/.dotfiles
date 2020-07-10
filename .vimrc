@@ -33,6 +33,7 @@ Plugin 'christoomey/vim-conflicted' " aids in resolving git merge and rebase con
 Plugin 'smerrill/vcl-vim-plugin' " syntax highlighting for VCL
 Plugin 'nathanaelkane/vim-indent-guides' " visually displays indent levels
 Plugin 'tpope/vim-rhubarb' " enables :Gbrowse (from fugitive.vim) to open GitHub URLs
+Plugin 'dense-analysis/ale' " Asynchronous Lint Engine provides linting (e.g. Prettier) and auto-completion
 
 " === All Plugins must be added above this line ===
 call vundle#end()
@@ -129,3 +130,8 @@ if executable('ag')
   " Use ag instead of ack
   let g:ackprg = 'ag --vimgrep --ignore-dir=spec/cassettes'
 endif
+
+" ALE config
+let g:ale_fixers = { '*': ['prettier', 'remove_trailing_lines', 'trim_whitespace'] }
+let g:ale_fix_on_save = 1
+let g:ale_set_balloons = 1

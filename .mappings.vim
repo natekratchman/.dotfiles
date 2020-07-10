@@ -61,6 +61,10 @@ map \| :NERDTreeFind<CR>
 " git blame (tpope/vim-fugitive)
 map <leader>g :Gblame<CR>
 
+" ALE
+map <leader>d :ALEGoToDefinition<CR>
+map <leader>r :ALEFindReferences<CR>
+
 " toggle comment
 map <leader>/ <plug>NERDCommenterToggle
 
