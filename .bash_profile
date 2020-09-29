@@ -52,6 +52,7 @@ prompt
   # Configurations
     export JRUBY_OPTS='-J-Xmx1g --1.9'
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
+    export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
  
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
