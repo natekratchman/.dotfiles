@@ -70,7 +70,7 @@ prompt
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
     export HEROKU="/usr/local/heroku/bin"
     export WORKON_PATH='/Users/nate.kratchman/code/workon/'
-    export NODE_PATH="/usr/local/opt/node@10/bin"
+    export NODE_PATH="/usr/local/opt/node@12/bin"
     export POSTGRES_PATH="/usr/local/opt/postgresql@9.4/bin"
     export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
     #export ELIXIR="/usr/local/bin/elixir"
