@@ -3,18 +3,18 @@ source ~/.bash_profile.local
 
 ## PROMPT FORMATTING
 # ===================
- 
+
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 function git_branch {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
- 
+
 function ruby_version {
   rbenv version | sed -e 's/ .*//'
 }
- 
+
 function prompt {
   # Reset
   local Default='\e[0m'       # Text Reset
@@ -48,16 +48,16 @@ function prompt {
 prompt
 
 # ENVIRONMENT VARIABLES
-# ===================== 
+# =====================
   # Configurations
     export JRUBY_OPTS='-J-Xmx1g --1.9'
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
     export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
- 
+
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
     export GIT_MERGE_AUTOEDIT='no'
- 
+
     # Editors
     # Tells your shell that when a program requires various editors, use sublime.
     # The -w flag tells your shell to wait until sublime exits
@@ -65,7 +65,7 @@ prompt
     export SVN_EDITOR=vim
     export GIT_EDITOR=vim
     export EDITOR=vim
- 
+
   # Paths
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
     export HEROKU="/usr/local/heroku/bin"
