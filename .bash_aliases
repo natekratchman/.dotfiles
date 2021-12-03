@@ -48,7 +48,7 @@ alias g="genie"
 alias her="heroku"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias vim-plugin-install='vim +PluginInstall +qall'
-alias lint-rb='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs rubocop'
+alias lint-rb='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs bundle exec rubocop'
 alias lint-rbp='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs rails_best_practices'
 alias lint-js='git diff --diff-filter=d master.. --name-only | grep .js$ | xargs eslint'
 
