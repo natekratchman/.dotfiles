@@ -71,7 +71,7 @@ prompt
     export HEROKU="/usr/local/heroku/bin"
     export WORKON_PATH='/Users/nate.kratchman/code/workon/'
     export NODE_PATH="/usr/local/opt/node@12/bin"
-    export POSTGRES_PATH="/usr/local/opt/postgresql@9.4/bin"
+    export POSTGRES_PATH="/usr/local/opt/postgresql@13/bin"
     export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
     #export ELIXIR="/usr/local/bin/elixir"
     #export ERLANG="/usr/local/bin/erl"
