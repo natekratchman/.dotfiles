@@ -135,6 +135,7 @@ endif
 
 " ALE config
 let g:ale_fixers = { '*': ['prettier', 'remove_trailing_lines', 'trim_whitespace'] }
+let g:ale_pattern_options = { '.*\.sql$': { 'ale_fixers': [] } }
 let g:ale_fix_on_save = 1
 let g:ale_set_balloons = 0
 set noballooneval
