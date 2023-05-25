@@ -12,45 +12,35 @@ alias cl="clear"
 
 # Git
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
-alias glom='git log --oneline master..'
-alias glo='git log --oneline'
-alias gcom='git co master'
-alias grim='git rebase -i master'
-alias dm='git diff master..'
-alias dmno='git diff master.. --name-only'
-alias grc='git rebase --continue'
-alias s='git status'
-alias d='git diff'
-alias dc='git diff --cached'
 alias b='git branch'
 alias bm='git branch --merged'
-
-# Docker
-alias dockup='docker-compose up -d'
-alias dockstop='docker-compose stop'
-alias dr='dock rspec'
-alias dock-maji-start='dock foreman start -f Procfile.dev'
+alias d='git diff'
+alias dc='git diff --cached'
+alias dm='git diff master..'
+alias dmno='git diff master.. --name-only'
+alias gcom='git co master'
+alias glo='git log --oneline'
+alias glom='git log --oneline master..'
+alias grim='git rebase -i master'
+alias lint-rb='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs bundle exec rubocop'
+alias lint-rbp='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs rails_best_practices'
+alias lint-js='git diff --diff-filter=d master.. --name-only | grep .js$ | xargs eslint'
+alias s='git status'
 
 # CW
 alias maji-start='foreman start -f Procfile.dev.local'
 alias maji-server='bundle exec puma -C ./config/puma.rb'
-alias karma-start='./node_modules/.bin/karma start --no-auto-watch --browsers ChromeHeadless --port 9876'
 alias her-maji-prod='heroku run rails c -a maji-production'
-alias her-picha-prod='heroku run rails c -a cw-picha-production'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
 alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
 alias be="bundle exec"
-alias ber="RACK_ENV=test; bundle exec rspec"
-alias g="genie"
+alias ber="RACK_ENV=test; bundle exec spring rspec"
+alias hber="DISABLE_HEADLESS_CHROME=true; RACK_ENV=test; bundle exec spring rspec"
 alias her="heroku"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
-alias vim-plugin-install='vim +PluginInstall +qall'
-alias lint-rb='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs bundle exec rubocop'
-alias lint-rbp='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs rails_best_practices'
-alias lint-js='git diff --diff-filter=d master.. --name-only | grep .js$ | xargs eslint'
 
 function process-on-port () {
   local port="$@"
