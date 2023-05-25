@@ -142,3 +142,7 @@ fi
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   source ~/.config/exercism/exercism_completion.bash
 fi
+
+# add Github Copilot CLI commands to shell
+# https://www.npmjs.com/package/@githubnext/github-copilot-cli
+eval "$(github-copilot-cli alias -- "$0")"
