@@ -11,20 +11,36 @@ alias cl="clear"
 # alias rm="rm -i"
 
 # Git
+primary_branch() {
+  if git rev-parse --verify master >/dev/null 2>&1; then
+    echo "master"
+  elif git rev-parse --verify main >/dev/null 2>&1; then
+    echo "main"
+  else
+    echo "Error: Neither 'master' nor 'main' branches found." >&2
+    return 1
+  fi
+}
+
+alias dmno='git diff $(primary_branch).. --name-only'
+alias gcom='git co $(primary_branch)'
+alias glom='git log --oneline $(primary_branch)..'
+
+
 alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
 alias b='git branch'
 alias bm='git branch --merged'
 alias d='git diff'
 alias dc='git diff --cached'
-alias dm='git diff master..'
-alias dmno='git diff master.. --name-only'
-alias gcom='git co master'
+alias dm='git diff $(primary_branch)..'
+alias dmno='git diff $(primary_branch).. --name-only'
+alias gcom='git co $(primary_branch)'
 alias glo='git log --oneline'
-alias glom='git log --oneline master..'
-alias grim='git rebase -i master'
-alias lint-rb='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs bundle exec rubocop'
-alias lint-rbp='git diff --diff-filter=d master.. --name-only | grep .rb$ | xargs rails_best_practices'
-alias lint-js='git diff --diff-filter=d master.. --name-only | grep .js$ | xargs eslint'
+alias glom='git log --oneline $(primary_branch)..'
+alias grim='git rebase -i $(primary_branch)'
+alias lint-rb='git diff --diff-filter=d $(primary_branch).. --name-only | grep .rb$ | xargs bundle exec rubocop'
+alias lint-rbp='git diff --diff-filter=d $(primary_branch).. --name-only | grep .rb$ | xargs rails_best_practices'
+alias lint-js='git diff --diff-filter=d $(primary_branch).. --name-only | grep .js$ | xargs eslint'
 alias s='git status'
 
 # CW
