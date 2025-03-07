@@ -1,7 +1,7 @@
 # Quick Navigation
 alias up="cd .."
 alias ..="cd .."
-alias code="cd ~/Code; ls"
+alias cc="cd ~/Code; ls"
 
 # Bash overrides
 alias ls="ls -1G"
