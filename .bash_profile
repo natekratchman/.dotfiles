@@ -52,7 +52,9 @@ prompt
   # Configurations
     export JRUBY_OPTS='-J-Xmx1g --1.9'
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
-    export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+    export CPPFLAGS="-I$(brew --prefix gmp)/include" \
+    export LDFLAGS="-L$(brew --prefix gmp)/lib" \
+    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)" \
 
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
@@ -67,21 +69,15 @@ prompt
     export EDITOR=vim
 
   # Paths
-    export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin"
-    export HEROKU="/usr/local/heroku/bin"
-    export WORKON_PATH='/Users/nate.kratchman/code/workon/'
-    export NODE_PATH="/usr/local/opt/node@16/bin"
-    export POSTGRES_PATH="/usr/local/opt/postgresql@13/bin"
-    export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
-    #export ELIXIR="/usr/local/bin/elixir"
-    #export ERLANG="/usr/local/bin/erl"
-    #export MACPORTS="/opt/local/bin:/opt/local/sbin"
+    #export HEROKU="/usr/local/heroku/bin"
+    #export NODE_PATH="/usr/local/opt/node@16/bin"
+    #export POSTGRES_PATH="/usr/local/opt/postgresql@13/bin"
+    #export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
-    #export PYTHON="/usr/local/share/python"
-    export PHP5_PATH='/usr/local/php5/bin'
-    export PATH="$MYSQL_PATH:$POSTGRES_PATH:$NODE_PATH:$PHP5_PATH:$WORKON_PATH:$HEROKU:$USR_PATHS:$PATH"
+    #export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin:$PATH
+    export PATH=/opt/homebrew/bin:$PATH
 
-    export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+    export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/:/opt/homebrew/opt/openssl/:/opt/homebrew/opt/openssl@3/:/opt/homebrew/opt/openssl@3.4/
 
 # Final Configurations and Plugins
 # =====================
@@ -103,10 +99,6 @@ export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
 # load rbenv
 eval "$(rbenv init -)"
-
-# load nvm
-export NVM_DIR="/Users/Nate/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 ## tmuxinator
 # https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.bash
@@ -146,3 +138,13 @@ fi
 # add Github Copilot CLI commands to shell
 # https://www.npmjs.com/package/@githubnext/github-copilot-cli
 eval "$(github-copilot-cli alias -- "$0")"
+
+# enable direnv (installed via Homebrew)
+# direnv is a shell extension that manages your environment variables based on the current directory
+# eval "$(direnv hook bash)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
