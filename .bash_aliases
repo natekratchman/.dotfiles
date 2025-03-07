@@ -48,6 +48,7 @@ alias s='git status'
 alias maji-start='foreman start -f Procfile.dev.local'
 alias maji-server='bundle exec puma -C ./config/puma.rb'
 alias her-maji-prod='heroku run rails c -a maji-production'
+alias get-secret='function _getsecret() { doppler secrets get "$1" -p maji -c prd; }; _getsecret'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
