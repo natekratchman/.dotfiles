@@ -1,14 +1,9 @@
 # Quick Navigation
 alias up="cd .."
-alias ..="cd .."
-alias cc="cd ~/Code; ls"
 
 # Bash overrides
 alias ls="ls -1G"
 alias lsa="ls -A1G"
-alias cl="clear"
-# alias mv="mv -i"
-# alias rm="rm -i"
 
 # Git
 primary_branch() {
@@ -45,18 +40,19 @@ alias lint-js='git diff --diff-filter=d $(primary_branch).. --name-only | grep .
 alias s='git status'
 
 # CW
-alias maji-start='foreman start -f Procfile.dev.local'
-alias maji-server='bundle exec puma -C ./config/puma.rb'
-alias her-maji-prod='heroku run rails c -a maji-production'
+alias maji-start='foreman start -f Procfile'
+alias maji-server='echo "\`maji-server\` is deprecated. \`maji-start\` will now start the puma server."'
+alias lima-maji-prod='lima run maji production bundle exec rails console --size=large'
 alias get-secret='function _getsecret() { doppler secrets get "$1" -p maji -c prd; }; _getsecret'
+alias spring-fix='export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES; spring stop'
+alias pod-status='kubectl get pods --all-namespaces'
+alias cc='claude'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
 alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
-alias be="bundle exec"
 alias ber="RACK_ENV=test; bundle exec spring rspec --format documentation"
-alias her="heroku"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
 
 function process-on-port () {

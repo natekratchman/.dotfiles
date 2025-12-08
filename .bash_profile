@@ -75,7 +75,7 @@ prompt
     #export MYSQL_PATH="/usr/local/opt/mysql@5.7/bin"
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin:$PATH
-    export PATH=/opt/homebrew/bin:$PATH
+    export PATH=/opt/homebrew/bin:~/.local/bin:$PATH
 
     export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/:/opt/homebrew/opt/openssl/:/opt/homebrew/opt/openssl@3/:/opt/homebrew/opt/openssl@3.4/
 
@@ -147,4 +147,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Auto-use .nvmrc version if present
+cd() { builtin cd "$@" && nvm_auto_switch; }
+nvm_auto_switch() {
+  if [[ -f .nvmrc ]]; then
+    nvm use
+  fi
+}
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
