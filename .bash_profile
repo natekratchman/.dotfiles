@@ -1,6 +1,9 @@
 source ~/.bash_aliases
 source ~/.bash_profile.local
 
+# Initialize Homebrew first (required for brew commands below)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 ## PROMPT FORMATTING
 # ===================
 
@@ -52,9 +55,9 @@ prompt
   # Configurations
     export JRUBY_OPTS='-J-Xmx1g --1.9'
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
-    export CPPFLAGS="-I$(brew --prefix gmp)/include" \
-    export LDFLAGS="-L$(brew --prefix gmp)/lib" \
-    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)" \
+    export CPPFLAGS="-I$(brew --prefix gmp)/include"
+    export LDFLAGS="-L$(brew --prefix gmp)/lib"
+    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)"
 
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
@@ -135,10 +138,6 @@ if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   source ~/.config/exercism/exercism_completion.bash
 fi
 
-# add Github Copilot CLI commands to shell
-# https://www.npmjs.com/package/@githubnext/github-copilot-cli
-eval "$(github-copilot-cli alias -- "$0")"
-
 # enable direnv (installed via Homebrew)
 # direnv is a shell extension that manages your environment variables based on the current directory
 # eval "$(direnv hook bash)"
@@ -155,5 +154,7 @@ nvm_auto_switch() {
   fi
 }
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# add Github Copilot CLI commands to shell (requires node via nvm)
+# https://www.npmjs.com/package/@githubnext/github-copilot-cli
+eval "$(github-copilot-cli alias -- "$0")"
 . "$HOME/.cargo/env"
