@@ -13,7 +13,7 @@ Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdcommenter' " comment toggling
 Plugin 'rking/ag.vim' " replacement for 'ack', AKA the_silver_searcher
 Plugin 'kien/ctrlp.vim' " directory search
-Plugin 'Valloric/YouCompleteMe' " auto-completion
+" Plugin 'Valloric/YouCompleteMe' " auto-completion (disabled - use ALE for completion instead)
 Plugin 'scrooloose/nerdtree' " tree view for directory
 Plugin 'airblade/vim-gitgutter' " git gutter
 Plugin 'tpope/vim-surround' " delete (ds') or change (cs\"') quotes
@@ -49,8 +49,9 @@ let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:ctrlp_custom_ignore = '*/cassettes/*'
 let g:ctrlp_switch_buffer = 'et' " If a file is already open, open it again in a new pane instead of switching to the existing pane
 
-let g:ycm_auto_hover = '' " Disable YCM showing documentation in a popup at the cursor location after a short delay (https://github.com/ycm-core/YouCompleteMe#the-gycm_auto_hover-option)
-let g:ycm_server_python_interpreter = '/opt/homebrew/bin/python3'
+" YCM settings (disabled with plugin)
+" let g:ycm_auto_hover = '' " Disable YCM showing documentation in a popup at the cursor location after a short delay (https://github.com/ycm-core/YouCompleteMe#the-gycm_auto_hover-option)
+" let g:ycm_server_python_interpreter = '/opt/homebrew/bin/python3'
 
 " source plugins and mappings
 :so ~/.vim/plugins/*.vim
