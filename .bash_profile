@@ -2,7 +2,9 @@ source ~/.bash_aliases
 source ~/.bash_profile.local
 
 # Initialize Homebrew first (required for brew commands below)
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 ## PROMPT FORMATTING
 # ===================
@@ -55,9 +57,12 @@ prompt
   # Configurations
     export JRUBY_OPTS='-J-Xmx1g --1.9'
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
-    export CPPFLAGS="-I$(brew --prefix gmp)/include"
-    export LDFLAGS="-L$(brew --prefix gmp)/lib"
-    export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)"
+    # Only set these if brew is available
+    if command -v brew &> /dev/null; then
+      export CPPFLAGS="-I$(brew --prefix gmp)/include"
+      export LDFLAGS="-L$(brew --prefix gmp)/lib"
+      export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)"
+    fi
 
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
@@ -90,8 +95,8 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 # Git Bash Completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if command -v brew &> /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+  . "$(brew --prefix)/etc/bash_completion"
 fi
 
 # Load the default .profile
@@ -101,7 +106,9 @@ fi
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 
 # load rbenv
-eval "$(rbenv init -)"
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 ## tmuxinator
 # https://github.com/tmuxinator/tmuxinator/blob/master/completion/tmuxinator.bash
@@ -156,5 +163,9 @@ nvm_auto_switch() {
 
 # add Github Copilot CLI commands to shell (requires node via nvm)
 # https://www.npmjs.com/package/@githubnext/github-copilot-cli
-eval "$(github-copilot-cli alias -- "$0")"
-. "$HOME/.cargo/env"
+if command -v github-copilot-cli &> /dev/null; then
+  eval "$(github-copilot-cli alias -- "$0")"
+fi
+
+# Load Rust/Cargo environment if installed
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
