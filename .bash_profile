@@ -69,12 +69,11 @@ prompt
     export GIT_MERGE_AUTOEDIT='no'
 
     # Editors
-    # Tells your shell that when a program requires various editors, use sublime.
-    # The -w flag tells your shell to wait until sublime exits
-    export VISUAL=vim
-    export SVN_EDITOR=vim
-    export GIT_EDITOR=vim
-    export EDITOR=vim
+    # Use system vim (not MacVim from Homebrew which has library issues)
+    export VISUAL=/usr/bin/vim
+    export SVN_EDITOR=/usr/bin/vim
+    export GIT_EDITOR=/usr/bin/vim
+    export EDITOR=/usr/bin/vim
 
   # Paths
     #export HEROKU="/usr/local/heroku/bin"
