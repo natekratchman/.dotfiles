@@ -42,11 +42,12 @@ alias s='git status'
 # CW
 alias maji-start='foreman start -f Procfile'
 alias maji-server='echo "\`maji-server\` is deprecated. \`maji-start\` will now start the puma server."'
-alias lima-maji-prod='lima run maji production bundle exec rails console --size=large'
+alias lima-maji-prod='lima run bundle exec rails console -a production-maji --size=large'
 alias get-secret='function _getsecret() { doppler secrets get "$1" -p maji -c prd; }; _getsecret'
 alias spring-fix='export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES; spring stop'
 alias pod-status='kubectl get pods --all-namespaces'
-alias cc='claude'
+alias cc='claude --add-dir=~/.claude'
+alias cc-triage='claude --add-dir=~/.claude --strict-mcp-config --mcp-config ~/.claude/mcp-config-bug-triage.json'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
