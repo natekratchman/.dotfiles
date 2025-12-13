@@ -106,6 +106,10 @@
     "type": "command",
     "command": "bash ~/.claude/scripts/statusline-command.sh"
   },
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": true,
+    "document-skills@anthropic-agent-skills": true
+  },
   "outputStyle": "Explanatory",
   "alwaysThinkingEnabled": true
 }
