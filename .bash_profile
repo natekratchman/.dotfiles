@@ -168,3 +168,13 @@ fi
 
 # Load Rust/Cargo environment if installed
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+# Google Cloud SDK Configuration (via Homebrew)
+# Use system Python 3.14 instead of bundled versions
+export CLOUDSDK_PYTHON=/usr/local/bin/python3
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/share/google-cloud-sdk/path.bash.inc' ]; then . '/usr/local/share/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/share/google-cloud-sdk/completion.bash.inc' ]; then . '/usr/local/share/google-cloud-sdk/completion.bash.inc'; fi
