@@ -1,5 +1,6 @@
 # Quick Navigation
 alias up="cd .."
+alias dots='cd ~/.dotfiles'
 
 # Bash overrides
 alias ls="ls -1G"
