@@ -110,6 +110,8 @@ nmap <leader>= gg=G``
 " fast scrolling
 nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
+vnoremap <C-e>  3<C-e>3j
+vnoremap <C-y>  3<C-y>3k
 
 " open directory (nerdtree)
 map \ :NERDTreeToggle<CR>
@@ -166,7 +168,7 @@ set smartcase                " case-sensitive search if any caps
 set history=10000
 set wildmode=longest,list
 set incsearch
-set scrolloff=5
+set scrolloff=20
 set backspace=indent,eol,start
 set showcmd                  " display incomplete commands
 set nobackup                 " don't make backups at all (incl. 3 below)

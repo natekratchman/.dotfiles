@@ -49,10 +49,6 @@ vnoremap <leader><BS> "_d
 " auto-indent entire file
 nmap <leader>= gg=G``
 
-" fast scrolling
-nnoremap <C-e>  3<C-e>
-nnoremap <C-y>  3<C-y>
-
 " open directory (nerdtree)
 map \ :NERDTreeToggle<CR>
 " ...at current file
