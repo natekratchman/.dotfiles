@@ -47,8 +47,6 @@ alias lima-maji-prod='lima run bundle exec rails console -a production-maji --si
 alias get-secret='function _getsecret() { doppler secrets get "$1" -p maji -c prd; }; _getsecret'
 alias spring-fix='export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES; spring stop'
 alias pod-status='kubectl get pods --all-namespaces'
-alias cc='claude --add-dir=~/.claude'
-alias cc-triage='claude --add-dir=~/.claude --strict-mcp-config --mcp-config ~/.claude/mcp-config-bug-triage.json'
 
 # Other
 alias editbash="vim ~/.bash_aliases"
@@ -56,6 +54,9 @@ alias editvim="vim ~/.mappings.vim"
 alias reload="source ~/.bash_profile"
 alias ber="RACK_ENV=test; bundle exec spring rspec --format documentation"
 alias reindex-ctags="rm tags; ctags -R app lib spec"
+alias cc='claude --add-dir=~/.claude'
+alias ccyolo='claude --add-dir=~/.claude --dangerously-skip-permissions'
+alias code='code-insiders'
 
 function process-on-port () {
   local port="$@"
