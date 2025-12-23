@@ -24,7 +24,9 @@
       "Bash(wc:*)",
       "Read(//private/tmp/**)",
       "Read(/Users/nate.kratchman/.claude/**/*)",
+      "Read(/Users/nate.kratchman/code/maji/**/*)",
       "Search(/Users/nate.kratchman/.claude/**/*)",
+      "Search(/Users/nate.kratchman/code/maji/**/*)",
       "WebSearch",
       "mcp__Sentry__find_organizations",
       "mcp__Sentry__get_issue_details",
@@ -71,7 +73,6 @@
     ],
     "defaultMode": "default"
   },
-  "model": "opus",
   "hooks": {
     "PermissionRequest": [
       {
@@ -116,5 +117,9 @@
     "document-skills@anthropic-agent-skills": true
   },
   "outputStyle": "Explanatory",
-  "alwaysThinkingEnabled": true
+  "syntaxHighlightingDisabled": false,
+  "alwaysThinkingEnabled": true,
+  "enabledPlugins": {
+    "compound-engineering@every-marketplace": true
+  }
 }
