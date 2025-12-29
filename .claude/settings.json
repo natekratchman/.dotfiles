@@ -16,26 +16,25 @@
       "Bash(git log:*)",
       "Bash(git show:*)",
       "Bash(git worktree:*)",
+      "Bash(grep:*)",
       "Bash(head:*)",
       "Bash(nvm ls:*)",
       "Bash(rbenv which:*)",
       "Bash(ruby --version:*)",
       "Bash(spring-fix)",
+      "Bash(tree:*)",
       "Bash(wc:*)",
       "Read(//private/tmp/**)",
       "Read(/Users/nate.kratchman/.claude/**/*)",
       "Read(/Users/nate.kratchman/code/maji/**/*)",
       "Search(/Users/nate.kratchman/.claude/**/*)",
       "Search(/Users/nate.kratchman/code/maji/**/*)",
+      "Skill(*)",
       "WebSearch",
-      "mcp__Sentry__find_organizations",
-      "mcp__Sentry__get_issue_details",
-      "mcp__chrome-devtools__click",
-      "mcp__chrome-devtools__fill_form",
-      "mcp__chrome-devtools__list_pages",
-      "mcp__chrome-devtools__navigate_page",
-      "mcp__chrome-devtools__take_screenshot",
-      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__*",
+      "mcp__context7__get-library-docs",
+      "mcp__context7__resolve-library-id",
+      "mcp__playwright__browser_*",
       "mcp__serena__check_onboarding_performed",
       "mcp__serena__find_file",
       "mcp__serena__find_symbol",
@@ -47,29 +46,16 @@
       "mcp__serena__read_memory",
       "mcp__serena__search_for_pattern",
       "mcp__serena__think_about_collected_information",
-      "mcp__serena__write_memory",
-      "mcp__playwright__browser_navigate",
-      "mcp__playwright__browser_press_key",
-      "mcp__playwright__browser_click",
-      "mcp__playwright__browser_type",
-      "mcp__playwright__browser_wait_for",
-      "mcp__playwright__browser_console_messages",
-      "mcp__atlassian__getJiraIssue",
-      "Bash(grep:*)",
-      "mcp__playwright__browser_take_screenshot",
-      "mcp__Sentry__search_events"
+      "mcp__serena__write_memory"
     ],
-    "deny": [
-      "WebFetch",
+    "deny": ["Read(./.env)", "Read(./secrets/**)"],
+    "ask": [
       "Bash(curl:*)",
-      "Read(./.env)",
-      "Read(./secrets/**)",
+      "Bash(git push:*)",
       "mcp__serena__insert_before_symbol",
       "mcp__serena__replace_symbol_body",
-      "mcp__serena__insert_after_symbol"
-    ],
-    "ask": [
-      "Bash(git push:*)"
+      "mcp__serena__insert_after_symbol",
+      "WebFetch"
     ],
     "defaultMode": "default"
   },
@@ -113,13 +99,11 @@
     "command": "bash ~/.claude/scripts/statusline-command.sh"
   },
   "enabledPlugins": {
-    "example-skills@anthropic-agent-skills": true,
-    "document-skills@anthropic-agent-skills": true
+    "compound-engineering@every-marketplace": true,
+    "document-skills@anthropic-agent-skills": true,
+    "example-skills@anthropic-agent-skills": true
   },
   "outputStyle": "Explanatory",
   "syntaxHighlightingDisabled": false,
-  "alwaysThinkingEnabled": true,
-  "enabledPlugins": {
-    "compound-engineering@every-marketplace": true
-  }
+  "alwaysThinkingEnabled": true
 }
