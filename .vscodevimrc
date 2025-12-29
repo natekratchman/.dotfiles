@@ -1,0 +1,11 @@
+" VS Code-specific vimrc
+" Sources main .vimrc then unmaps keys that VS Code handles via editorScroll
+
+source ~/.vimrc
+
+" Unmap scroll keys - VS Code's editorScroll command is used instead
+" (configured in settings.json via vim.normalModeKeyBindingsNonRecursive)
+silent! nunmap <C-e>
+silent! nunmap <C-y>
+silent! vunmap <C-e>
+silent! vunmap <C-y>
