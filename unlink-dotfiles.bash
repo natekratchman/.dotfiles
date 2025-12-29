@@ -1,16 +1,22 @@
 #!/bin/bash
 
-rm ~/.bash_aliases
-rm ~/.bash_profile
-rm ~/.bashrc
-rm ~/.inputrc
-rm ~/.mappings.vim
-rm ~/.tmux.config
-rm ~/.vimrc
-rm ~/.vim/plugins/story_id.vim
+# Remove symlinks
+rm -f ~/.bash_aliases
+rm -f ~/.bash_profile
+rm -f ~/.bashrc
+rm -f ~/.inputrc
+rm -f ~/.mappings.vim
+rm -f ~/.tmux.config
+rm -f ~/.vimrc
+rm -f ~/.vscodevimrc
+rm -f ~/.vim/plugins/story_id.vim
+rm -f ~/.claude/settings.json
+rm -rf ~/.claude/skills
 
+# Remove dotfiles repo
 rm -rf ~/.dotfiles
 
+# Restore backups if they exist
 if [ -e ~/.bash_aliases-BACKUP ]; then
   mv ~/.bash_aliases-BACKUP ~/.bash_aliases
 fi
@@ -32,7 +38,15 @@ fi
 if [ -e ~/.vimrc-BACKUP ]; then
   mv ~/.vimrc-BACKUP ~/.vimrc
 fi
+if [ -e ~/.vscodevimrc-BACKUP ]; then
+  mv ~/.vscodevimrc-BACKUP ~/.vscodevimrc
+fi
 if [ -e ~/.vim/plugins/story_id.vim-BACKUP ]; then
   mv ~/.vim/plugins/story_id.vim-BACKUP ~/.vim/plugins/story_id.vim
 fi
-
+if [ -e ~/.claude/settings.json-BACKUP ]; then
+  mv ~/.claude/settings.json-BACKUP ~/.claude/settings.json
+fi
+if [ -e ~/.claude/skills-BACKUP ]; then
+  mv ~/.claude/skills-BACKUP ~/.claude/skills
+fi
