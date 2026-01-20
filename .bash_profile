@@ -59,8 +59,6 @@ prompt
     export JAVA_OPTS="-XX:MaxPermSize=512m -Xms1024m -Xmx2048m -Dfile.encoding=UTF-8 -Djruby.jit.threshold=50 -Djruby.compile.mode=JIT -Djava.awt.headless=true -server -Djruby.compile.invokedynamic=false"
     # Only set these if brew is available
     if command -v brew &> /dev/null; then
-      export CPPFLAGS="-I$(brew --prefix gmp)/include"
-      export LDFLAGS="-L$(brew --prefix gmp)/lib"
       export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$(brew --prefix libyaml) --with-openssl-dir=$(brew --prefix openssl@3)"
     fi
 
@@ -83,8 +81,6 @@ prompt
     #export NODE="/usr/local/lib/node_modules:$NODE_PATH"
     #export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/Users/Nate/bin:$PATH
     export PATH=/opt/homebrew/bin:~/.local/bin:$PATH
-
-    export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/:/opt/homebrew/opt/openssl/:/opt/homebrew/opt/openssl@3/:/opt/homebrew/opt/openssl@3.4/
 
 # Final Configurations and Plugins
 # =====================
