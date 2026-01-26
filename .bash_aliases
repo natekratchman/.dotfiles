@@ -3,8 +3,11 @@ alias up="cd .."
 alias dots='cd ~/.dotfiles'
 
 # Bash overrides
-alias ls="ls -1G"
-alias lsa="ls -A1G"
+# alias ls="ls -1G"
+# alias lsa="ls -A1G"
+alias ls="eza -a1" # https://github.com/eza-community/eza
+alias lst="ls -T --level=2" # ls == eza
+alias lst3="lst --level=3"
 
 # Git
 primary_branch() {
