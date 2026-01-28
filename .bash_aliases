@@ -1,6 +1,5 @@
 # Quick Navigation
 alias up="cd .."
-alias dots='cd ~/.dotfiles'
 
 # Bash overrides
 # alias ls="ls -1G"
@@ -21,12 +20,7 @@ primary_branch() {
   fi
 }
 
-alias dmno='git diff $(primary_branch).. --name-only'
-alias gcom='git co $(primary_branch)'
-alias glom='git log --oneline $(primary_branch)..'
-
-
-alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
+# Git
 alias b='git branch'
 alias bm='git branch --merged'
 alias d='git diff'
@@ -38,28 +32,30 @@ alias glo='git log --oneline'
 alias glom='git log --oneline $(primary_branch)..'
 alias gp='git pull -p; git branch --merged'
 alias grim='git rebase -i $(primary_branch)'
+alias lint-js='git diff --diff-filter=d $(primary_branch).. --name-only | grep .js$ | xargs eslint'
 alias lint-rb='git diff --diff-filter=d $(primary_branch).. --name-only | grep .rb$ | xargs bundle exec rubocop'
 alias lint-rbp='git diff --diff-filter=d $(primary_branch).. --name-only | grep .rb$ | xargs rails_best_practices'
-alias lint-js='git diff --diff-filter=d $(primary_branch).. --name-only | grep .js$ | xargs eslint'
+alias parent-branch='git show-branch | sed "s/].*//" | grep "\*" | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed "s/^.*\[//" | sed -E "s/(\^|~[0-9]*)//"'
 alias s='git status'
 
 # CW
-alias maji-start='foreman start -f Procfile'
-alias maji-server='echo "\`maji-server\` is deprecated. \`maji-start\` will now start the puma server."'
-alias lima-maji-prod='lima run bundle exec rails console -a production-maji --size=large'
+alias ber="RACK_ENV=test; bundle exec spring rspec --format documentation"
 alias get-secret='function _getsecret() { doppler secrets get "$1" -p maji -c prd; }; _getsecret'
-alias spring-fix='export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES; spring stop'
+alias lima-maji-prod='lima run bundle exec rails console -a production-maji --size=large'
+alias maji-server='echo "\`maji-server\` is deprecated. \`maji-start\` will now start the puma server."'
+alias maji-start='foreman start -f Procfile'
 alias pod-status='kubectl get pods --all-namespaces'
+alias spring-fix='export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES; spring stop'
 
 # Other
-alias editbash="vim ~/.bash_aliases"
-alias editvim="vim ~/.mappings.vim"
-alias reload="source ~/.bash_profile"
-alias ber="RACK_ENV=test; bundle exec spring rspec --format documentation"
-alias reindex-ctags="rm tags; ctags -R app lib spec"
 alias cc='claude --add-dir=~/.claude'
 alias ccyolo='claude --add-dir=~/.claude --dangerously-skip-permissions'
 alias code='code-insiders'
+alias dots='cd ~/.dotfiles'
+alias editbash="vim ~/.bash_aliases"
+alias editvim="vim ~/.mappings.vim"
+alias reindex-ctags="rm tags; ctags -R app lib spec"
+alias reload="source ~/.bash_profile"
 
 function process-on-port () {
   local port="$@"
